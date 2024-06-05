@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '../Navbar/Navbar';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export default function Profile({ userData }) {
   const [user, setUser] = useState([])
@@ -40,8 +41,10 @@ export default function Profile({ userData }) {
   return (
     <>
       <Navbar />
+      <div className="bodyhome2">
+
       <div className="photoprofile">
-        <i className="fa-regular fa-user profile"></i>
+      <i class="fa-solid fa-user profile"></i>
       </div>
       <section className="section-forminfo">
         <h2 className="info">My Profile</h2>
@@ -68,11 +71,16 @@ export default function Profile({ userData }) {
               <label className="lab4">Address: </label>
             
             </li>
+        
+            
+            
           </ul>
+            <Link to='/changepassword' className='forget' ><p style={{marginTop:'5px' }}>change Password</p>  </Link>
 
           <button type="button" className="edit">Edit Profile</button>
         </form>
       </section>
+      </div>
     </>
   );
 }

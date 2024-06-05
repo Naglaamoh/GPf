@@ -60,7 +60,8 @@ import { date } from 'joi';
          
 
             {error && <div className="alert alert-danger my-2">{error}</div>}
-            <section className="section-form">
+            <div className="bodyhome2">
+            <section className="section-formlogin">
                 <h2>Login</h2>
 
                 <form onSubmit={submitRegisterForm}>
@@ -81,6 +82,11 @@ import { date } from 'joi';
                         id="password"
                         value={user.password}
                     />
+                   <div className="d-flex  flex-row-reverse">
+
+                   <Link to='/forgetpassword' className='forget' ><p style={{marginTop:'5px' }}>Forget Password?</p>  </Link>
+                    
+                    </div>  
                 
                     
                     <button className="submit" disabled={isLoading}>
@@ -90,10 +96,11 @@ import { date } from 'joi';
                             'Login'
                         )}
                     </button>
-                
+                    <p style={{marginTop:'5px'}}> Don't have An Account <Link to='/register'>Sign Up</Link></p> 
+                  
                 </form>
             </section>
-            
+            </div>
         </>
     );
 }

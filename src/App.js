@@ -12,6 +12,8 @@ import Profile from './Components/Profile/Profile'
 import Initial from './Components/Initial/Initial';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
+import Forgetpassword from './Components/Forgetpassword/Forgetpassword'
+import Changepassword from './Components/Changepassword/Changepassword'
 import { jwtDecode } from 'jwt-decode';
 // import Dashboard from './Components/Admin/dashboard';
 // import Team from '../src/Components/Admin/team';
@@ -51,7 +53,9 @@ export default function App()
       {path:'/about', element:<About/>},
       {path:'/profile', element:<Profile userData={userData}/>},
       {path:'/contact', element:<Contact/>},
+      {path:'/forgetpassword', element:<Forgetpassword/>},
 
+      {path:'/changepassword', element:<Changepassword/>},
       
         // {path:'/admin', element:<ErrorBoundary><Dashboard/></ErrorBoundary>},
       {/* //  children:[

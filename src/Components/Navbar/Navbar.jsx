@@ -5,10 +5,10 @@ export default function Navbar({userData, logout}) {
   
     return (
         <>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav className="navbar navbar-expand-lg navbar-dark " style={{backgroundColor:'black'}}>
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#">
-                        <img src={`../images/logo.png`} alt='logo' style={{ height: '50px', width: '50px' }} />        </a>
+                        <img src={`../images/download3.jpg`} alt='logo' style={{ height: '50px', width: '50px' }} />        </a>
                     {/* <a className="navbar-brand" href="#">Law Cafe</a> */}
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -17,18 +17,18 @@ export default function Navbar({userData, logout}) {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
+                            <li className="nav-item" style={{fontSize:'20px'}}>
                                 <Link className="nav-link" aria-current="page" to="/home">Home</Link>
                             </li>
-                            <li className="nav-item">
+                            <li className="nav-item"style={{fontSize:'20px'}}>
                                 <Link className="nav-link" aria-current="page" to="/case">Cases</Link>
                             </li>
                            
-                            <li className="nav-item">
+                            <li className="nav-item"style={{fontSize:'20px'}}>
                                 <Link className="nav-link" aria-current="page" to="/Profile">My Profile</Link>
                             </li>
 
-                            <li className="nav-item">
+                            <li className="nav-item"style={{fontSize:'20px'}}>
                                 <Link className="nav-link" aria-current="page" to="/about">about</Link>
                             </li>
                         </ul>
@@ -36,7 +36,7 @@ export default function Navbar({userData, logout}) {
                     </div>
                     <form className="d-flex">
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button className="btn btn-outline-success" type="submit">Search</button>
+                        <button className="btn" type="submit" style={{backgroundColor:'#63502b', color:"white"}}>Search</button>
                     </form>
                     <li className='logout' onClick={logout}><span>LogOut</span>
                     
