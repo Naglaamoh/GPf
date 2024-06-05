@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '../Navbar/Navbar';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+=======
 import { getAuthUser } from "../../helper/Storage";
 
 const auth = getAuthUser();
@@ -72,11 +74,14 @@ export default function Profile({ userData }) {
   return (
     <>
       <Navbar />
+      <div className="bodyhome2">
+
       <div className="photoprofile">
-        <i className="fa-regular fa-user profile"></i>
+      <i class="fa-solid fa-user profile"></i>
       </div>
       <section className="section-forminfo" style={{ height: "80%", width: "80%", marginTop: "5%" }}>
         <h2 className="info">My Profile</h2>
+
         {isEditing ? (
           <form onSubmit={handleSubmit} style={{ fontWeight: "bold" }}>
             <ul>
@@ -153,6 +158,7 @@ export default function Profile({ userData }) {
           </div>
         )}
       </section>
+      </div>
     </>
   );
 }

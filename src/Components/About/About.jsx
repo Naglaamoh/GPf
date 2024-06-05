@@ -4,7 +4,8 @@ export default function About() {
   return (
     <>
      <Navbar/>
-    <body className='bodyabout'>
+     <div className="bodyhome2">
+
     <h1>
         لماذا تختارنا وبكل ثقة؟ 
     </h1>
@@ -34,7 +35,7 @@ export default function About() {
         
     </div>
     
-</body>
+</div>
     
     </>
   )

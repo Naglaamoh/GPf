@@ -177,7 +177,7 @@ export default function Initial() {
 
     </div>
 
- <Link to='/login'>
+ <Link className='action' to='/login'>
     <div className="parent4"id='p4'>
     <h5 className='offer'>What We Offer</h5>
 
