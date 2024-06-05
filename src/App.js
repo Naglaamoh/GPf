@@ -33,22 +33,7 @@ export default function App() {
     console.log(decodedToken);
     setuserData(decodedToken);
   }
-  let routers = createBrowserRouter([
-    { path: "/", element: <Initial /> },
-    // {path:'/initial', element:<Initial/>},
-    { path: "/login", element: <Login /> },
-    { path: "/register", element: <Register /> },
-    {
-      path: "/home",
-      element: <Home setuserData={setuserData} userData={userData} />,
-    },
-    { path: "/case", element: <Cases /> },
-    { path: "/about", element: <About /> },
-    { path: "/profile", element: <Profile userData={userData} /> },
-    { path: "/contact", element: <Contact /> },
 
-
-    }
     let routers = createBrowserRouter([
 
 

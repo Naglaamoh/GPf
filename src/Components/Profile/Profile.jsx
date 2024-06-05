@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Navbar from '../Navbar/Navbar';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-=======
+
 import { getAuthUser } from "../../helper/Storage";
 
 const auth = getAuthUser();
