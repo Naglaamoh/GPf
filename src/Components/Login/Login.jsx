@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { date } from 'joi';
+import { setAuthUser } from "../../helper/Storage";
+
 
  function Login() {
     const navigate = useNavigate();
@@ -32,7 +34,9 @@ import { date } from 'joi';
             );
             console.log(response);
             setIsLoading(false);
-            localStorage.setItem('userToken', date.token)
+            // localStorage.setItem('userToken', date.token)
+            setAuthUser(response.data.data)
+
             // Reset the form after successful registration
             setUser({
                 email: '',
