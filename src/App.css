@@ -54,6 +54,13 @@
   background-size: cover;
   height: 100vh;
 }
+.bodyhome2{
+  background-image:url(../public/images/background1.jpg) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
 .navbar-brand{
   color: #FDF0D1;
 }
@@ -81,56 +88,65 @@ margin-left: 60px;
   margin-top: 30px;
 }
 .welcome{
-   background-color: #fdf0d1a9;
+   background-color: #fdf0d134;
+   /* border: 2px solid #fdf0d1a9;
+   box-shadow: 0px 0px 5px  #fdf0d1a9 ; */
    margin-top: 20px;
    height: 250px;
 
 }
 .hwelcome{
-  text-shadow: 3px 3px #12372aa5;
+  text-shadow: 4px 4px 6px #63502b;
   text-align: center;
   font-size: 40px;
 }
 .hourwork{
-  border: solid 4px #12372A ;
+  border: solid 4px #63502b ;
+  border-radius: 15px;
   margin-top: 100px;
   height: 250px;
   background-color: #fdf0d19a;
 }
 .divteam{
-  border: solid 4px #12372A ;
+  border: solid 4px #63502b ;
+  border-radius: 15px;
   margin-top: 20px;
   height: 600px;
   background-color: #fdf0d19a;
 }
 .divnews{
-  border: solid 4px #12372A ;
+  border: solid 4px #63502b ;
+  border-radius: 15px;
   margin-top: 20px;
   height: 600px;
   background-color: #fdf0d17a;
 }
 .hhome{
-  text-shadow: 3px 3px #12372aa5;
+  text-shadow: 4px 4px 6px #63502b;
   text-align: center;
   font-size: 40px;
 }
 .pinitial{
-  text-shadow: 2px 2px #12372aa5;
+  text-shadow: 4px 4px 6px #63502b;
   text-align: center;
   font-size: 25px;
+  color: #393636;
 
 }
 .btnteam{
-  background-color: #12372A;
+  background-color: #63502b;
+  border: 0px;
+  padding: 12px;
+  border-radius: 15px;
   color: #FDF0D1;
   font-size: 20px;
-  width: 150px;
-  height: 50px;
-  margin-left: 130px;
+  width: auto;
+  height: auto;
+  margin-left: 110px;
 
 }
 .btnteam:hover{
-  background-color: #12372abc;
+  background-color: #4a3408;
 
 }
 .disc1{
@@ -145,28 +161,37 @@ margin-left: 60px;
 
 }
 .btnhours{
-  background-color: #12372A;
+  background-color: #63502b;
+  border-radius: 15px;
+  border: 0px;
+  padding: 12px;
   color: #FDF0D1;
   font-size: 20px;
-  width: 150px;
-  height: 65px;
-  margin-left: 145px;
+  width: auto;
+  height: auto;
+  margin-left: 125px;
 
 }
 .btnhours:hover{
-  background-color: #12372abc;
+  background-color: #4a3408;
 
 }
 .btnnews{
   display: block;
   /* padding: 30px; */
-  background-color: #12372A;
+  background-color: #63502b;
+  border-radius: 15px;
+  border: 0px;
   color: #FDF0D1;
   font-size: 20px;
   width: 150px;
   height: 65px;
   margin-left: 145px;
-  margin-top: 40px;
+  margin-top: 30px;
+}
+
+.btnnews:hover{
+  background-color: #4a3408;
 }
 .a3{
   color: #FDF0D1;

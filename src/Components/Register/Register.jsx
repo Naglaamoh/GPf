@@ -76,6 +76,7 @@ function Register() {
        
             {error && <div className="alert alert-danger my-2">{error}</div>}
             {successMessage && <div className="alert alert-success my-2">User created successfully, please check your email to verify your account</div>}
+            <div className="bodyhome2">
 
             <section className="section-form">
                 <h2>Register</h2>
@@ -148,10 +149,10 @@ function Register() {
                             'Register'
                         )}
                     </button>
-                    Have An Account <Link to='/login'>Log In</Link>
+                   <p style={{marginTop:'5px'}}> Have An Account <Link to='/login'>Log In</Link></p> 
                 </form>
             </section>
-            
+            </div>
         </>
     );
 }

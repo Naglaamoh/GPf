@@ -4,6 +4,8 @@ import Navbar from '../Navbar/Navbar'
 import Footer from '../Footer/Footer'
 import React from 'react'
 import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
+
 
 export default function Home({userData , setuserData}) {
 
@@ -29,23 +31,22 @@ export default function Home({userData , setuserData}) {
                     <div className="discription">
                         <p className="disc1">Our team excels in providing precise legal consultations and resolving diverse
                             legal matters with utmost expertise</p>
-                        <button className="btnteam"><a className="a3" href="ourteam.html">Show The Team</a></button>
+                       <Link to="/ourteam"> <button className="btnteam">Show The Team</button> </Link>
                     </div>
                 </div>
             </div>
             <div className="hours">
                 <div className="welcome">
                     <h2 className="hwelcome"> welcome,<br /> Dear!</h2>
-                    {/* <img src={`../images/logo.png`} alt='logo' style={{height:'50px' , width:'50px'}}/> */}
 
-                    <p className="pinitial">
-                        Your Initial Consultation <br /> With A Lawer is FREE!
+                    <p className="pinitial" >
+                        Your Initial Consultation <br /> With A Lawyer is FREE!
                     </p>
                 </div>
                 <div className="hourwork">
                     <h2 className="hhome">Working Hours</h2>
-                    <p className="whours">From 9 am to 7pm</p>
-                    <button className="btnhours"><a className="a3" href="#">Book an Appointment</a></button>
+                    <p className="whours"><i class="fa-regular fa-clock" style={{marginRight:'7px'}}></i>9am : 7pm</p>
+                   <Link to="/case"><button className="btnhours"><a className="a3" href="#">Book an Appointment</a></button></Link> 
                 </div>
             </div>
             <div className="news">

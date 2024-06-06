@@ -13,15 +13,15 @@ export default function Initial() {
             <nav className="navbar navbar-expand-lg navbar-dark  " style={{backgroundColor:'black'}}>
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#">
-                        <img src={`../images/download3.jpg`} alt='logo' style={{ height: '50px', width: '50px' }} />        </a>
-                    {/* <a className="navbar-brand" href="#">Law Cafe</a> */}
+                    <img src={`../images/logo3.jpg`} alt='logo' style={{ height: '50px', width: '50px',borderRadius:'50%' }} />        </a>
+                    <span className='LOGO'>Law Café</span>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                         aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav me-right mb-2 mb-lg-0" style={{marginLeft:'700px'}}>
+                        <ul className="navbar-nav me-right mb-2 mb-lg-0" style={{marginLeft:'600px'}}>
                             <li className="nav-item">
                                 <a className="nav-link"style={{fontSize:'20px'}} href="#p1">Our Office</a>
                             </li>
@@ -177,7 +177,7 @@ export default function Initial() {
 
     </div>
 
- <Link to='/login'>
+ <Link className='action' to='/login'>
     <div className="parent4"id='p4'>
     <h5 className='offer'>What We Offer</h5>
 
