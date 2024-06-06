@@ -84,6 +84,7 @@ export default function Profile({ userData }) {
                 <label style={{ fontWeight: "bold" }} className="lab1">Username: </label>
                 <input 
                   type="text" 
+                  
                   name="username" 
                   value={updateUser.username} 
                   onChange={handleChange} 

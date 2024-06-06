@@ -1,96 +1,150 @@
-// import Axios  from 'axios';
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import Navbar from '../Navbar/Navbar' 
+import Navbar from '../Navbar/Navbar';
+import { getAuthUser } from "../../helper/Storage";
+
+const auth = getAuthUser();
 
 export default function Create() {
- 
-  const [values, setValues] = useState({
-    client: '',
-    number: '',
-    description: '',
+  const [addUserCase, setAddUserCase] = useState({
+    name: "",
+    description: "",
+    numberOfCase: "",
+    phoneNumber: "",
+    caseFile: null,
   });
 
   const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    axios
-      .post('http://localhost:4000/cases', values)
-      .then((res) => {
-        console.log(res);
-        navigate('/Cases');
-      })
-      .catch((err) => console.log(err));
+  const handleChange = (e) => {
+    const { name, value, files } = e.target;
+    if (name === "caseFile") {
+      setAddUserCase((prevState) => ({
+        ...prevState,
+        [name]: files[0],
+      }));
+    } else {
+      setAddUserCase((prevState) => ({
+        ...prevState,
+        [name]: value,
+      }));
+    }
   };
 
-  return (<>
-  <Navbar/>
-    
-    <div className="d-flex w-100 justify-content-center align-items-center vh-100">
-      <div className="frmm w-50 border shadow px-5 pt-3 pb-5 rounded bg-white">
-        <h1 className="frm">Add a Case</h1>
-        <form onSubmit={handleSubmit}>
-          
-          <div className="mb-2">
-            {/* <label htmlFor="client">Name:</label> */}
-            <input
-              type="text"
-              name="client"
-              className="form-control m-3"
-              placeholder="Enter Case Name"
-              onChange={(e) => setValues({ ...values, client: e.target.value })}
-            />
-          </div>
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData();
+    formData.append('name', addUserCase.name);
+    formData.append('description', addUserCase.description);
+    formData.append('numberOfCase', addUserCase.numberOfCase);
+    formData.append('phoneNumber', addUserCase.phoneNumber);
+    formData.append('caseFile', addUserCase.caseFile);
 
-          {/* <div className="mb-2">
-         
-            <input
-              type="tel"
-              name="number"
-              className="form-control m-3 text-dark"
-              placeholder="Enter phone Number"
-              onChange={(e) => setValues({ ...values, number: e.target.value })}
-              pattern="^\+2\d{11}$"
-              title="Please enter a valid Egyptian phone number starting with +2"
-            />
-          </div> */}
+    // Debugging logs
+    console.log("Form Data:");
+    for (let [key, value] of formData.entries()) {
+      console.log(key, value);
+    }
 
-      {/* <div>
-      <label htmlFor="phoneNumber">Phone Number:</label>
-      <input
-        type="text"
-        name="phoneNumber"
-        value={phoneNumber}
-        onChange={handlePhoneNumberChange}
-      />
-    </div> */}
+    try {
+      const response = await axios.post(
+        `https://thelawcafe-v1.onrender.com/case/addCase`,
+        formData, {
+          headers: {
+            accesstoken: `accesstoken_${auth.token}`,
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+      // console.log(response);
+      setAddUserCase({
+        name: "",
+        description: "",
+        numberOfCase: "",
+        phoneNumber: "",
+        caseFile: null,
+      });
+      navigate('/Cases');
+    } catch (error) {
+      console.log("Submission Error:", error);
+    }
+  };
 
-          <div className="mb-2">
-            {/* <label htmlFor="description">Description:</label> */}
-            <textarea
-              name="description"
-              id="description"
-              cols="75"
-              rows="5"
-              className="form-control m-3"
-              placeholder="Enter Case Description"
-              onChange={(e) =>
-                setValues({ ...values, description: e.target.value })
-              }
-            ></textarea>
-          </div>
+  return (
+    <>
+      <Navbar />
+      <div className="d-flex w-100 justify-content-center align-items-center vh-100">
+        <div className="frmm w-50 border shadow px-5 pt-3 pb-5 rounded bg-white">
+          <h1 className="frm">Add a Case</h1>
+          <form onSubmit={handleSubmit}>
+            <div className="mb-2">
+              <input
+                type="text"
+                name="name"
+                className="form-control m-3"
+                placeholder="Enter Case Name"
+                value={addUserCase.name}
+                onChange={handleChange}
+              />
+            </div>
 
-          <button className="btncase2">Submit</button>
+            <div className="mb-2">
+              <input
+                type="text"
+                name="numberOfCase"
+                className="form-control m-3"
+                placeholder="Enter Case Number"
+                value={addUserCase.numberOfCase}
+                onChange={handleChange}
+              />
+            </div>
 
-         <button className="btncase2">  <Link className="btncase" to="/home">
-            Back
-          </Link>
-          </button>
-        </form>
+            <div className="mb-2">
+              <input
+                type="tel"
+                name="phoneNumber"
+                className="form-control m-3"
+                placeholder="Enter Phone Number"
+                value={addUserCase.phoneNumber}
+                onChange={handleChange}
+                title="Please enter a valid Egyptian phone number starting with +2"
+              />
+            </div>
+
+            <div className="mb-2">
+              <textarea
+                name="description"
+                id="description"
+                cols="75"
+                rows="5"
+                className="form-control m-3"
+                placeholder="Enter Case Description"
+                value={addUserCase.description}
+                onChange={handleChange}
+              ></textarea>
+            </div>
+
+            <div className="mb-2">
+              <input
+                type="file"
+                name="caseFile"
+                className="form-control m-3"
+                onChange={handleChange}
+              />
+            </div>
+
+            <button type="submit" className="btncase2">
+              Submit
+            </button>
+            <button className="btncase2">
+              <Link className="btncase" to="/home">
+                Back
+              </Link>
+            </button>
+          </form>
+        </div>
       </div>
-    </div></>
+    </>
   );
 }
-
