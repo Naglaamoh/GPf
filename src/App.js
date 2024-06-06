@@ -34,6 +34,7 @@ export default function App() {
     console.log(decodedToken);
     setuserData(decodedToken);
   }
+
   // let routers = createBrowserRouter([
   //   { path: "/", element: <Initial /> },
   //   // {path:'/initial', element:<Initial/>},
@@ -50,6 +51,7 @@ export default function App() {
 
 
   //   }
+
     let routers = createBrowserRouter([
 
 
