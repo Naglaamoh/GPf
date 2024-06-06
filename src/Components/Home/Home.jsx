@@ -31,7 +31,7 @@ export default function Home({userData , setuserData}) {
                     <div className="discription">
                         <p className="disc1">Our team excels in providing precise legal consultations and resolving diverse
                             legal matters with utmost expertise</p>
-                        <button className="btnteam"><a className="a3" href="ourteam.html">Show The Team</a></button>
+                       <Link to="/ourteam"> <button className="btnteam">Show The Team</button> </Link>
                     </div>
                 </div>
             </div>

@@ -1118,6 +1118,9 @@ transform: translate(-50%,0);
   background-size: cover;
 
 }
+.LOGO{
+  color: #c3bfbf;
+}
 
 
 .login-form{
@@ -1207,7 +1210,7 @@ transform: translate(-50%,0);
   left:50%;
   transform: translate(-50%,-50%);
   width: 400px;
-  height: 350px;
+  height: auto;
   text-align: center;
   background-color: #fdf0d15b;
   padding: 20px;
@@ -1221,7 +1224,7 @@ transform: translate(-50%,0);
   width: 200px;
   height: 200px;
   border-radius: 100%;
-  border: solid 3px #63502b ;
+  /* border: solid 3px #63502b ; */
   
 }
 .profile{
@@ -1249,6 +1252,7 @@ transform: translate(-50%,0);
   background-color: #fdf0d15b;
   padding: 20px;
   border: solid 4px #63502b ;
+  border-radius: 15px;
 
 }
 
@@ -1265,6 +1269,7 @@ transform: translate(-50%,0);
         height: 50px;
         border: 1px solid;
         padding: 3px;
+        border-radius: 10px;
     
     }
     .btnchange{
@@ -1280,10 +1285,11 @@ transform: translate(-50%,0);
         font-size: 20px ;
         font-style: oblique ;
         font-weight: bold;
-        color: #0d201a;
+        color: #4e3f1f;
         margin-top: 10px;
 
     }
+    
     .edit{
         background-color: #FDF0D1;
         color: #63502b;
@@ -1311,25 +1317,52 @@ transform: translate(-50%,0);
   font-size: 20px;
   padding: 5px;
   /* margin-top: px; */
-  width: 140px;
+  width: auto;
+  height: auto;
+  border-radius: 15px;
+
+}
+.edit:hover{
+  background-color: #463717;
+}
+
+.labell{
+  display: block;
+text-align: left;
+}
+
+.labbtn{
+ margin: 5px;
+ background-color: #63502b;
+ color: #f7f5f2;
+ width: auto;
+ height: auto;
+ padding: 10px;
+ border: 0;
+ border-radius: 15px;
+ 
+}
+.labbtn:hover{
+
+  background-color: #463717;
 
 }
 
 .lab1{
   font-size: 20px;
-  margin-right: 240px;
+  /* margin-right: 240px; */
 }
 .lab2{
   font-size: 20px;
-  margin-right: 181px;
+  /* margin-right: 181px; */
 }
 .lab3{
   font-size: 20px;
-  margin-right: 270px;
+  /* margin-right: 270px; */
 }
 .lab4{
   font-size: 20px;
-  margin-right: 220px;
+  /* margin-right: 220px; */
 }
 .overley{
   position: absolute;

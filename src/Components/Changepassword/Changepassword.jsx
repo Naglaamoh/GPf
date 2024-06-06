@@ -16,7 +16,6 @@ export default function Changepassword() {
                 <p className="password">Confirm Password</p>
                 <input type="password" placeholder="at least 8 character" id="password"/>
                 <button className="btnchange">Update Password</button>
-                <p style={{marginTop:'5px'}}> Don't have An Account <Link to='/register'>Sign Up</Link></p> 
     
             </form>
 </section>
