@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Navbar from '../Navbar/Navbar';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-=======
+
 import { getAuthUser } from "../../helper/Storage";
 
 const auth = getAuthUser();
@@ -79,81 +79,76 @@ export default function Profile({ userData }) {
       <div className="photoprofile">
       <i class="fa-solid fa-user profile"></i>
       </div>
-      <section className="section-forminfo" style={{ height: "80%", width: "80%", marginTop: "5%" }}>
+      <section className="section-forminfo" >
         <h2 className="info">My Profile</h2>
 
         {isEditing ? (
           <form onSubmit={handleSubmit} style={{ fontWeight: "bold" }}>
-            <ul>
-              <li>
-                <label style={{ fontWeight: "bold" }} className="lab1">Username: </label>
+            
+                <label style={{ fontWeight: "bold" }} className="lab1 labell">Username: </label>
                 <input 
                   type="text" 
                   name="username" 
                   value={updateUser.username} 
                   onChange={handleChange} 
+                  className='labell'
                 />
-              </li>
-              <li>
-                <label className="lab2">Phone Number: </label>
+              
+                <label className="lab1 labell">Phone Number: </label>
                 <input 
                   type="text" 
                   name="phoneNumber" 
                   value={updateUser.phoneNumber} 
                   onChange={handleChange} 
+                  className='labell'
                 />
-              </li>
-              <li>
-                <label className="lab3">Email: </label>
+             
+                <label className="lab1 labell">Email: </label>
                 <input 
                   type="email" 
                   name="email" 
                   value={updateUser.email} 
                   onChange={handleChange} 
-                  disabled
+                  className='labell'
                 />
-              </li>
-              <li>
-                <label className="lab4">Age: </label>
+              
+                <label className="lab1 labell">Age: </label>
                 <input 
                   type="text" 
                   name="age" 
                   value={updateUser.age} 
                   onChange={handleChange} 
+                  className='labell'
                 />
-              </li>
-              <li>
-                <label className="lab4">Address: </label>
+              
+                <label className="lab1 labell">Address: </label>
                 <input 
                   type="text" 
                   name="address" 
                   value={updateUser.address} 
                   onChange={handleChange} 
+                  className='labell'
                 />
-              </li>
-            </ul>
-            <button type="submit" className="save">Save</button>
-            <button type="button" className="cancel" onClick={handleEditToggle}>Cancel</button>
+              
+            <button type="submit" className="save labbtn">Save</button>
+            <button type="button" className="cancel labbtn" onClick={handleEditToggle}>Cancel</button>
           </form>
         ) : (
           <div style={{ fontWeight: "bold" }}>
-            <ul>
-              <li>
-                <label style={{ fontWeight: "bold" }} className="lab1">Username: {user.username} </label>
-              </li>
-              <li>
-                <label className="lab2">Phone Number: {user.phoneNumber} </label>
-              </li>
-              <li>
-                <label className="lab3">Email: {user.email} </label>
-              </li>
-              <li>
-                <label className="lab4">Age: {user.age} </label>
-              </li>
-              <li>
-                <label className="lab4">Address: {user.address} </label>
-              </li>
-            </ul>
+           
+                <label style={{ fontWeight: "bold" }} className="lab1 labell">Username: {user.username} </label>
+             
+                <label className="lab2 labell">Phone Number: {user.phoneNumber} </label>
+             
+                <label className="lab3 labell">Email: {user.email} </label>
+             
+                <label className="lab4 labell">Age: {user.age} </label>
+              
+                <label className="lab4 labell">Address: {user.address} </label>
+
+                <Link to='/changepassword' className='forget' ><p style={{marginTop:'5px' }}>Change password</p>  </Link>
+
+             
             <button type="button" className="edit" onClick={handleEditToggle}>Edit Profile</button>
           </div>
         )}

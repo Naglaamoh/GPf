@@ -9,7 +9,6 @@ export default function Navbar({userData, logout}) {
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#">
                         <img src={`../images/logo3.jpg`} alt='logo' style={{ height: '50px', width: '50px',borderRadius:'50%' }} />        </a>
-                    {/* <a className="navbar-brand" href="#">Law Cafe</a> */}
                     <span className='LOGO'>Law Café</span>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
