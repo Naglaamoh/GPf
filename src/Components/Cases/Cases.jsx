@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Navbar from '../Navbar/Navbar';
+import { getAuthUser } from "../../Components/helper/Storage";
+
+const auth = getAuthUser();
 
 export default function Create() {
   
@@ -22,7 +25,13 @@ export default function Create() {
     event.preventDefault();
 
     axios
-      .post('http://localhost:4000/cases', values)
+      .post('https://thelawcafe-v1.onrender.com/case/addCase', values,{
+        headers: {
+          accesstoken: `accesstoken_${auth.token}`,
+          "Content-Type": "application/json",
+        },
+      })
+
       .then((res) => {
         console.log(res);
         navigate('/request');

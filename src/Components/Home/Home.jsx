@@ -13,8 +13,8 @@ export default function Home({userData , setuserData}) {
 
     function logout()
     {
-        localStorage.removeItem('userToken')
-        setuserData(null);
+        localStorage.removeItem('authUser')
+        
         navigate('/login');
     }
     
