@@ -2,7 +2,7 @@ import React, { useState , useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Navbar from '../Navbar/Navbar';
-import { getAuthUser } from "../../helper/Storage";
+import { getAuthUser } from "../../Components/helper/Storage";
 
 
 
