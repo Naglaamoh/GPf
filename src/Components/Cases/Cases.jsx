@@ -2,7 +2,7 @@ import React, { useState , useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Navbar from '../Navbar/Navbar';
-import { getAuthUser } from "../../Components/helper/Storage";
+import { getAuthUser } from "../../helper/Storage";
 
 
 
@@ -96,8 +96,6 @@ const caseFile = useRef(null);
   return (
     <>
       <Navbar />
-      <div className="bodyhome2">
-
       <div className="d-flex w-100 justify-content-center align-items-center vh-100">
         <div className="frmm w-50 border shadow px-5 pt-3 pb-5 rounded bg-white">
           <h1 className="frm">Add a Case</h1>
@@ -179,7 +177,6 @@ const caseFile = useRef(null);
             </button>
           </form>
         </div>
-      </div>
       </div>
     </>
   );
