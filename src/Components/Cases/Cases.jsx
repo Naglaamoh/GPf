@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Navbar from '../Navbar/Navbar';
-import { getAuthUser } from "../../helper/Storage";
+
+import { getAuthUser } from "../../Components/helper/Storage";
 
 
 const auth = getAuthUser();
@@ -77,6 +78,21 @@ export default function Create() {
       console.log("123123123");
       console.log('====================================');
       // setAuthUser(response.data.data)
+
+
+    axios
+      .post('https://thelawcafe-v1.onrender.com/case/addCase', values,{
+        headers: {
+          accesstoken: `accesstoken_${auth.token}`,
+          "Content-Type": "application/json",
+        },
+      })
+
+      .then((res) => {
+        console.log(res);
+        navigate('/request');
+      })
+      .catch((err) => console.log(err));
 
       // console.log(response);
       setAddUserCase({

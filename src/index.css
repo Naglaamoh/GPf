@@ -1376,4 +1376,158 @@ text-align: left;
 
   cursor: pointer;
 }
+.bodylawyer{
+  color: var(--font-color);
+  font-family: var(--main-font);
+  background-image: url(./Components/Images/photo_2024-03-09_22-30-53.jpg);
+  /* height: 100vh; */
+  background-size: 100% 100%;
+  background-position: center center;
+  background-attachment: fixed;
+}
+a {
+  color: var(--font-color);
+  text-decoration: none;
+}
+nav {
+  background-color: var(--nav-color);
+  border-radius: 4px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999999;
+}
+.card {
+  background-color: rgba(251, 251, 234, 0.585);
+}
+
+.e-profile {
+  background-color: rgb(252, 255, 213);
+}
+
+.card img {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
+
+.logo h1 {
+  font-family: "Libre Baskerville", serif;
+}
+
+.head{
+    color: var(--nav-color);
+}
+
+.frmm{
+  background-color: rgba(246, 246, 229, 0.427);
+  color: var(--nav-color);
+}
+
+.read{
+  color: var(--nav-color);
+  background-color: rgba(246, 246, 229, 0.427);
+  font-size: 20px;
+}
+
+.list{
+  font-size: 20px;
+}
+.table{
+  background-color: rgba(246, 246, 229, 0.427);
+}
+
+.testmonioal{
+  padding-top: 100px;
+}
+
+.carousel-item img{
+  width: 100px;
+  transform: translateY(50%);
+  
+}
+.carousel-indicators [data-bs-target]{
+  height: 30px;
+  border-radius: 50%;
+  text-indent: 0px;  
+}
+.carousel-indicators img{
+  /* text-indent: 0px; */
+  width: 100%;
+  border-radius: 50%;
+  height: 100%;
+}
+
+.home{
+  padding-top: 100px;
+  color: black;
+  font-size: 19px;
+  padding-bottom: 30px;
+  
+}
+
+.backhome{
+  background-color: var(--bg-card)
+}
+
+.court h2{
+  position: relative;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+  font-size: 3.25rem;
+}
+.court h2::after{
+  content: "Types Of Courts";
+  font-size: 80px;
+  font-weight: bold;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -30px;
+  opacity: .2;
+}
+.start{
+  height: 80vh;
+  background-color: #63502b62;
+}
+.start h1{
+  position: absolute;
+  top: 200px;
+  font-size: 80px;
+  color: black;
+  opacity: .7;
+  font-family: "Libre Baskerville", serif;
+  text-align: center;
+}
+.whatsapp_float{
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+.whatsapp-icon{
+  margin-top: 1px;
+}
+
+@media screen and (max-width: 767px) {
+  .whatsapp-icon{
+    margin-top: 10px;
+  }
+  .whatsapp_float{
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+    right: 10px;
+    font-size: 22px;
+  }
+}
 
