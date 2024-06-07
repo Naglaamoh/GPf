@@ -27,7 +27,7 @@ export default function Profile({ userData }) {
         `https://thelawcafe-v1.onrender.com/user/profileData`, {
           headers: {
             accesstoken: `accesstoken_${auth.token}`,
-            "Content-Type": "application/json",
+            // "Content-Type": "application/json",
           },
         }
       );
