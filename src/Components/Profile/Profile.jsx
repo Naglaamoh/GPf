@@ -28,7 +28,7 @@ export default function Profile({ userData }) {
           
           headers: {
             accesstoken: `accesstoken_${auth.token}`,
-            "Content-Type": "application/json",
+            // "Content-Type": "application/json",
           },
         }
       );
@@ -89,6 +89,7 @@ export default function Profile({ userData }) {
                 <label style={{ fontWeight: "bold" }} className="lab1 labell">Username: </label>
                 <input 
                   type="text" 
+                  
                   name="username" 
                   value={updateUser.username} 
                   onChange={handleChange} 
